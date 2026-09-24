@@ -70,3 +70,19 @@ input,textarea,select{font:inherit;box-sizing:border-box}textarea{resize:vertica
 .privateNotesList article{padding:16px;border:1px solid #e7ecef;border-radius:14px;background:#fff}
 .privateNotesList article small{color:var(--muted)}
 .privateNotesList article p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.55}
+
+.agendaSubtitle{display:block;margin-top:5px;color:var(--muted);font-size:14px}
+.compactConnect{position:relative;background:linear-gradient(135deg,#f3f8fa,#fff)}
+.calendarToolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:4px}
+.calendarToolbar h2{text-transform:capitalize;margin:3px 0 0}
+.monthNav{display:flex;gap:7px;align-items:center}
+.monthNav button{min-width:38px;height:38px;padding:0 12px;border:1px solid #dfe7ea;border-radius:10px;background:#fff;font-weight:700;cursor:pointer}
+.dayTop{display:flex;align-items:center;justify-content:space-between}
+.dayTop>span{display:grid;place-items:center;min-width:21px;height:21px;padding:0 5px;border-radius:999px;background:#f0f3f5;color:var(--muted);font-size:10px;font-weight:800}
+.calendarEvent{display:flex;gap:5px;align-items:center}
+.calendarEvent b{font-size:10px}.calendarEvent span{overflow:hidden;text-overflow:ellipsis}
+.calendarEvent.confirmed{background:#edf7f1}
+.appointmentCount{display:grid;place-items:center;min-width:34px;height:34px;padding:0 8px;border-radius:999px;background:#eef5f8;color:var(--navy);font-weight:800}
+.upcomingPanel .appointment{transition:transform .15s ease,box-shadow .15s ease}
+.upcomingPanel .appointment:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(15,39,58,.06)}
+@media(max-width:700px){.calendarToolbar{align-items:flex-start}.monthNav{flex-shrink:0}.compactConnect{padding:16px}}
