@@ -128,3 +128,21 @@ input,textarea,select{font-size:13px}.search{padding:5px 8px;border-radius:8px}
 .patientSummaryGrid,.therapyHistory,.processPanel{max-width:calc(100% - 328px)}
 @media(max-width:1050px){.patientExpedienteSide{float:none;width:100%;position:static;margin:0 0 14px}.expedienteSideList{grid-template-columns:repeat(2,minmax(0,1fr))}.patientTabs,.patientSummaryGrid,.therapyHistory,.processPanel{width:100%;max-width:none}}
 @media(max-width:620px){.expedienteSideList{grid-template-columns:1fr}}
+
+/* PsicoVida · dirección visual premium */
+body{background:linear-gradient(135deg,#faf9f6 0%,#f5f4ef 100%);color:#202438}
+main{padding-top:25px}
+header{padding:0 2px}header h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;color:#10184f;letter-spacing:-.45px}header p{color:#9a7a22;font-weight:650}
+.panel{border-color:#e9e5da;background:rgba(255,255,255,.94);box-shadow:0 8px 24px rgba(23,30,70,.035)}
+.patientExpedienteSide{width:300px;padding:0;overflow:hidden;border:1px solid #e8e2d2;border-radius:16px;background:#fff;box-shadow:0 14px 35px rgba(15,22,65,.065)}
+.expedienteSideHead{padding:18px 18px 15px;margin:0;background:linear-gradient(145deg,#fbfaf6,#f5f0e2);border-bottom:1px solid #e9e1ca}
+.expedienteSideHead .eyebrow{color:#9b7920}.expedienteSideHead h2{font-family:Georgia,"Times New Roman",serif;font-size:18px;font-weight:600;letter-spacing:-.2px;margin:5px 0 3px;color:#10185a}.expedienteSideHead p{font-size:10px;letter-spacing:.02em}
+.expedienteSideList{gap:0;padding:7px 8px 9px}.expedienteSideItem{min-height:50px;border-radius:10px;padding:9px 10px;grid-template-columns:30px 1fr 12px;gap:8px;border-bottom:1px solid #f2efe8}.expedienteSideItem:last-child{border-bottom-color:transparent}.expedienteSideItem:hover{background:#f8f6ef;border-color:#eee5cb;transform:translateX(2px)}
+.expedienteSideItem>svg{width:16px;height:16px;padding:6px;box-sizing:content-box;border-radius:8px;background:#f7f0d9;color:#a77c0c}.expedienteSideItem b{font-size:11.5px;font-weight:680;letter-spacing:-.05px}.expedienteSideItem small{font-size:9.5px;color:#888b96}.expedienteSideItem>span{color:#b0a584}
+.patientTabs{padding:4px;background:#efeee9;border:0;border-radius:11px;gap:3px}.patientTabs button{border:0!important;border-radius:8px!important;font-size:11px!important;font-weight:650!important;padding:8px 13px!important;color:#686b78!important}.patientTabs button.active{background:#fff!important;color:#10185a!important;box-shadow:0 2px 8px rgba(18,25,64,.07)!important}
+.patientSummaryGrid{gap:10px}.patientSummaryGrid .panel{min-height:110px;padding:16px}.bigMetric{font-family:Georgia,"Times New Roman",serif;font-weight:500}
+.therapyHistory h2,.processPanel h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;color:#10185a}
+.sessionComposer{border-radius:13px!important}.noteModeTabs{padding:3px;background:#f1f0ec;border-radius:9px}.noteModeTabs button{border-radius:7px!important;font-size:11px!important}
+input,textarea,select{border-color:#e2ded3;background:#fefefd;transition:border-color .15s,box-shadow .15s}input:focus,textarea:focus,select:focus{outline:none;border-color:#c7aa51;box-shadow:0 0 0 3px rgba(199,170,81,.11)}
+.primary{background:linear-gradient(135deg,#0a155d,#101b70)!important;border:0!important;font-weight:650;letter-spacing:.01em}
+@media(max-width:1050px){.patientExpedienteSide{width:100%}.expedienteSideList{padding:9px;gap:5px}.expedienteSideItem{border:1px solid #f0ece2}.patientTabs{width:100%}}
