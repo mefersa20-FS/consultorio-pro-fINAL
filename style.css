@@ -245,3 +245,20 @@ label{color:#505362}input,textarea,select{background:#fff;border-color:#e1dcd1}i
 .eyebrow{color:#9a7825}
 .muted{color:#777985}
 @media(max-width:900px){body{background:#f8f6f0}.panel{background:#fff}}
+
+/* PsicoVida · elegante + llamativo */
+:root{--lux-gold:#c39a32;--lux-navy:#0b1557;--lux-cream:#fbf8f0}
+aside{background:linear-gradient(165deg,#0b1557 0%,#071044 72%,#101958 100%)}
+.brand{border-bottom-color:rgba(220,190,96,.18)}.brand img{box-shadow:0 7px 20px rgba(0,0,0,.16)}
+nav button.active{background:linear-gradient(90deg,rgba(218,186,85,.16),rgba(255,255,255,.05));color:#f0d577}
+header h1{color:#0b1557}.eyebrow{color:#a77d18}
+.welcome{border-color:#e5d6a9!important;box-shadow:0 10px 28px rgba(30,27,65,.05)!important}.welcome:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(#d6b34f,#9d7414)}
+.panel{transition:border-color .18s,box-shadow .18s,transform .18s}.panel:hover{border-color:#ddd2b3;box-shadow:0 11px 30px rgba(20,26,60,.06)}
+.stats article{position:relative;overflow:hidden}.stats article:after{content:"";position:absolute;left:15px;bottom:0;width:34px;height:2px;background:#c6a044;border-radius:2px}
+.quick button{position:relative;overflow:hidden}.quick button:hover{border-color:#d9c78d!important;background:#fffdf8}
+.primary{background:linear-gradient(135deg,#0b1557,#17246f)!important;box-shadow:0 5px 14px rgba(11,21,87,.16)!important}.primary:hover{box-shadow:0 7px 18px rgba(11,21,87,.2)!important}
+.patientExpedienteSide{border-color:#e3d7b5;box-shadow:0 13px 34px rgba(20,25,60,.07)}.expedienteSideHead{background:linear-gradient(135deg,#fbf7eb,#f3ead1)}.expedienteSideItem>svg{background:#f5ecd1;color:#9d7415}
+.patientTabs button.active{color:#0b1557!important;box-shadow:0 3px 10px rgba(20,25,60,.08)!important}
+input:focus,textarea:focus,select:focus{border-color:#bd982f!important;box-shadow:0 0 0 3px rgba(195,154,50,.12)!important}
+.calendarToolbar h2,.sectionHead h2,.panel>h2{color:#0b1557}.dayCell.today{background:#fffaf0;box-shadow:inset 0 0 0 1px #c8a13d}.calendarEvent{border-left-color:#b68a20!important}
+.loginCard{box-shadow:0 26px 70px rgba(0,0,0,.16)!important}.loginCard:before{content:"";display:block;height:3px;margin:-1px -1px 18px;background:linear-gradient(90deg,#9d7415,#e1c56d,#9d7415);border-radius:16px 16px 0 0}
