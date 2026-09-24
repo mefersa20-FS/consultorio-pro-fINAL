@@ -262,3 +262,15 @@ header h1{color:#0b1557}.eyebrow{color:#a77d18}
 input:focus,textarea:focus,select:focus{border-color:#bd982f!important;box-shadow:0 0 0 3px rgba(195,154,50,.12)!important}
 .calendarToolbar h2,.sectionHead h2,.panel>h2{color:#0b1557}.dayCell.today{background:#fffaf0;box-shadow:inset 0 0 0 1px #c8a13d}.calendarEvent{border-left-color:#b68a20!important}
 .loginCard{box-shadow:0 26px 70px rgba(0,0,0,.16)!important}.loginCard:before{content:"";display:block;height:3px;margin:-1px -1px 18px;background:linear-gradient(90deg,#9d7415,#e1c56d,#9d7415);border-radius:16px 16px 0 0}
+
+/* Corrección visual: eliminar blancos fríos del panel */
+body{background:#f3efe6!important}
+main{background:linear-gradient(135deg,#f8f5ed 0%,#f1ecdf 100%);min-height:100vh}
+.accountBar{background:#f8f4e9!important;border-color:#ddd2b8!important}
+.panel,.stats article,.todayStrip,.agendaCalendar,.dayCell{background:#fffdf8!important}
+.stats article{border-color:#e2d7bd!important}
+.welcome{background:linear-gradient(115deg,#111b5c 0%,#17236d 58%,#9c7a26 145%)!important;border-color:#1b286e!important;color:#fff!important}
+.welcome .eyebrow{color:#e2c76e!important}.welcome h1{color:#fff!important}.welcome p{color:#e9eaf3!important}
+.welcome:before{background:linear-gradient(#e3c967,#b58a20)!important}
+.todayStrip{border-color:#e1d7c0!important}
+.quick button,.doc,.fileCategory,.savedSessions article{background:#fffdf8!important}
