@@ -49,3 +49,18 @@ input,textarea,select{font:inherit;box-sizing:border-box}textarea{resize:vertica
 .noteInputModes .recording{background:#fff;font-weight:800}.mediaPick{display:flex;align-items:center;padding:8px 13px;border-radius:8px;white-space:nowrap;cursor:pointer;font-size:13px}.mediaPick:hover{background:#fff}
 
 .calendarConnect{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:16px;padding:20px 22px;border-radius:18px;background:#eef5f8;border:1px solid #d8e6eb}.calendarConnect h2{margin:4px 0;color:var(--navy)}.calendarConnect p{margin:0;max-width:680px;color:var(--muted);line-height:1.5}@media(max-width:700px){.calendarConnect{align-items:flex-start;flex-direction:column}}
+
+.calendarActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.calendarActions a{text-decoration:none}
+.agendaCalendar{overflow:hidden}
+.weekHead,.monthGrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.weekHead{margin-top:18px;border:1px solid #e7ecef;border-bottom:0;border-radius:14px 14px 0 0;background:#f7f9fa}
+.weekHead span{padding:10px;text-align:center;font-size:12px;font-weight:800;color:var(--muted)}
+.monthGrid{border-left:1px solid #e7ecef;border-top:1px solid #e7ecef}
+.dayCell{min-height:112px;padding:9px;border-right:1px solid #e7ecef;border-bottom:1px solid #e7ecef;background:#fff;overflow:hidden}
+.dayNum{display:inline-grid;place-items:center;width:27px;height:27px;font-size:13px}
+.todayCell .dayNum{border-radius:50%;background:var(--navy);color:#fff}
+.emptyDay{background:#fafbfb}
+.calendarEvent{display:block;width:100%;margin-top:5px;padding:6px 7px;border:0;border-radius:7px;background:#eef5f8;color:var(--navy);font-size:11px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+.dayCell small{display:block;margin-top:5px;color:var(--muted)}
+@media(max-width:700px){.agendaCalendar{overflow-x:auto}.weekHead,.monthGrid{min-width:700px}.calendarActions{width:100%}.calendarActions>*{flex:1}.dayCell{min-height:95px}}
