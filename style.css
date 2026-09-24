@@ -189,3 +189,34 @@ button{transition:background .15s,border-color .15s,transform .15s,box-shadow .1
 button:active{transform:translateY(1px)}
 ::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background:#d9d5cb;border-radius:10px}::-webkit-scrollbar-track{background:transparent}
 @media(max-width:900px){.accountBar{margin-top:2px}.panel{box-shadow:none}.stats article{min-height:auto}.welcome{padding:18px!important}}
+
+/* PsicoVida · Pro polish 2026 */
+:root{--pro-shadow:0 10px 32px rgba(20,25,55,.055);--pro-shadow-hover:0 14px 38px rgba(20,25,55,.085);--pro-radius:12px}
+body{font-size:13.5px}
+main{max-width:1380px;padding:26px 34px 38px}
+aside{width:auto;padding:18px 13px}.brand{margin-bottom:3px}.brand img{width:48px;height:48px}.brandText strong{font-size:17px}
+nav button{min-height:38px;padding:8px 10px;font-size:12.5px;border-radius:8px}
+header{border-bottom:1px solid rgba(225,221,211,.75);padding-bottom:15px;margin-bottom:18px}header h1{font-size:25px;margin-top:3px}
+.panel{border-radius:var(--pro-radius);box-shadow:var(--pro-shadow);padding:17px}
+.panel:hover{box-shadow:var(--pro-shadow-hover)}
+.stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.stats article{border-radius:11px;padding:14px 15px}.stats strong{font-size:21px}
+.primary{min-height:34px;padding:8px 13px;border-radius:8px!important}.primary:hover{transform:none!important;filter:brightness(1.06)}
+.quick button{border-radius:10px;padding:13px}.quick button:hover{transform:none}
+.patientTabs{margin-bottom:14px;display:inline-flex;width:auto!important;max-width:calc(100% - 318px);background:#efeee9}.patientTabs button{white-space:nowrap}
+.patientExpedienteSide{width:292px;border-radius:13px;top:14px}.patientSummaryGrid,.therapyHistory,.processPanel{max-width:calc(100% - 310px)}
+.expedienteSideHead{padding:15px 16px 13px}.expedienteSideHead h2{font-size:17px}.expedienteSideList{padding:6px}.expedienteSideItem{min-height:46px;padding:7px 8px}.expedienteSideItem:hover{transform:none;background:#f8f6f0}
+.sessionComposer{background:#fcfbf8!important;border:1px solid #ebe7dd!important;padding:16px!important}
+.savedSessions article{border-radius:10px!important;background:#fff!important}
+.fields{gap:10px}.formsection label{margin:10px 0}label{gap:5px}input,textarea,select{padding:9px 10px!important}
+textarea{line-height:1.55}
+.calendarConnect{background:linear-gradient(135deg,#fff,#faf8f2)!important}.agendaCalendar{background:#fff!important}.dayCell{min-height:86px}.calendarEvent{box-shadow:none!important}
+.googleConnectCard{border:1px solid #ebe6d9!important;background:#fbfaf6!important}
+.privateNotes textarea{border:1px solid #e5dfcf!important;box-shadow:inset 0 1px 2px rgba(20,20,20,.02)}
+.loginCard{border-radius:16px!important}.loginCard input{min-height:42px}.loginButton{min-height:42px}
+.empty{background:#fbfaf6;border-color:#e5dfd0;padding:28px}
+.actions{align-items:center}
+.iconDanger{background:#fff7f7;border:1px solid #f1dddd}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid #c4a448!important;outline-offset:2px}
+@media(max-width:1050px){.patientTabs{display:flex;max-width:none;width:100%!important;overflow-x:auto}.patientSummaryGrid,.therapyHistory,.processPanel{max-width:none}.patientExpedienteSide{width:100%}}
+@media(max-width:900px){main{padding:68px 14px 26px}.panel{border-radius:11px}.stats{grid-template-columns:1fr}.quick{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.quick{grid-template-columns:1fr}header h1{font-size:22px}}
