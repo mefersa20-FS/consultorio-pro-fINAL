@@ -86,3 +86,7 @@ input,textarea,select{font:inherit;box-sizing:border-box}textarea{resize:vertica
 .upcomingPanel .appointment{transition:transform .15s ease,box-shadow .15s ease}
 .upcomingPanel .appointment:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(15,39,58,.06)}
 @media(max-width:700px){.calendarToolbar{align-items:flex-start}.monthNav{flex-shrink:0}.compactConnect{padding:16px}}
+
+.googleConnectCard{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:16px 0;padding:18px;border:1px solid #e1e9ec;border-radius:16px;background:#f8fbfc}
+.googleConnectCard>div{display:grid;gap:5px}.googleConnectCard span{color:var(--muted);font-size:13px}
+@media(max-width:700px){.googleConnectCard{align-items:stretch;flex-direction:column}.googleConnectCard button{width:100%}}
