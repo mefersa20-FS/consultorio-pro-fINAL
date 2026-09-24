@@ -90,3 +90,32 @@ input,textarea,select{font:inherit;box-sizing:border-box}textarea{resize:vertica
 .googleConnectCard{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:16px 0;padding:18px;border:1px solid #e1e9ec;border-radius:16px;background:#f8fbfc}
 .googleConnectCard>div{display:grid;gap:5px}.googleConnectCard span{color:var(--muted);font-size:13px}
 @media(max-width:700px){.googleConnectCard{align-items:stretch;flex-direction:column}.googleConnectCard button{width:100%}}
+
+/* PsicoVida · acabado editorial compacto */
+:root{--ivory:#f7f6f2;--line:#e7e5df;--soft:#f3f2ee;--muted:#737783}
+body{font-size:14px;letter-spacing:-.005em}
+.app{grid-template-columns:232px minmax(0,1fr)}
+aside{padding:20px 14px;gap:14px;box-shadow:4px 0 22px rgba(7,16,95,.06)}
+.brand{padding:4px 6px 14px}.brand img{width:52px;height:52px;border-radius:13px}
+nav{gap:4px}nav button{padding:9px 11px;border-radius:9px;font-size:13px;gap:9px}nav svg{width:16px;height:16px}
+.privacy{padding:9px 10px;border-radius:9px;font-size:10px}
+.supportBox{font-size:11px}
+main{padding:28px 32px;max-width:1320px}
+.accountBar{font-size:11px;margin-bottom:18px}
+header{min-height:52px;margin-bottom:20px}header p{font-size:11px;text-transform:uppercase;letter-spacing:.08em}h1{font-size:27px;letter-spacing:-.75px}h2{font-size:16px;letter-spacing:-.2px}
+.panel{padding:18px;border-radius:14px;margin-bottom:14px;box-shadow:0 5px 18px rgba(20,27,50,.035)}
+.stats{gap:12px;margin-bottom:15px}.stats article{padding:15px;border-radius:13px;box-shadow:none}.stats svg{width:39px;height:39px;padding:9px;border-radius:10px}.stats strong{font-size:22px}.stats span,.muted{font-size:11px}
+.primary,header button,.patient button,.actions button{padding:8px 12px;border-radius:9px;font-size:12px;box-shadow:none}
+.primary:hover{box-shadow:0 5px 14px rgba(7,16,95,.14)}
+.quick{gap:10px}.quick button{padding:13px;border-radius:11px}.quick svg{width:31px;height:31px}.quick b{font-size:12px}.quick span{font-size:10px}
+.patient{padding:11px 0}.avatar{width:35px;height:35px;font-size:12px}
+input,textarea,select{font-size:13px}.search{padding:5px 8px;border-radius:8px}
+.eyebrow{font-size:9px;letter-spacing:.11em}
+.calendarConnect{padding:16px!important;border-radius:14px!important}
+.calendarConnect h2{margin:4px 0 5px}.calendarConnect p{font-size:12px;margin:0}
+.agendaCalendar{padding:16px}.calendarToolbar h2{font-size:17px}.monthNav button{height:32px;min-width:32px;border-radius:8px;font-size:12px}
+.weekHead span{padding:8px;font-size:10px}.dayCell{min-height:92px;padding:7px}.dayNum{width:23px;height:23px;font-size:11px}.calendarEvent{padding:5px 6px;border-radius:6px;font-size:10px;margin-top:4px}
+.appointments{gap:7px;margin-top:12px}.appointment{padding:10px;border-radius:10px;gap:10px}.dateBadge{min-width:86px;padding:7px 9px;border-radius:8px;font-size:11px}.dateBadge span{font-size:11px}.appointment select{padding:7px;font-size:11px}.iconDanger{width:32px;height:32px;border-radius:8px}
+.googleConnectCard{padding:14px;border-radius:12px}.privateNotes textarea{min-height:145px}
+.welcome,.todayStrip,.featureCard,.closingBanner{border-radius:14px!important}
+@media(max-width:900px){.app{grid-template-columns:1fr}aside{width:232px;left:-250px}main{padding:68px 14px 20px}h1{font-size:24px}.panel{padding:15px}.dayCell{min-height:84px}}
