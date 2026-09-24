@@ -146,3 +146,46 @@ header{padding:0 2px}header h1{font-family:Georgia,"Times New Roman",serif;font-
 input,textarea,select{border-color:#e2ded3;background:#fefefd;transition:border-color .15s,box-shadow .15s}input:focus,textarea:focus,select:focus{outline:none;border-color:#c7aa51;box-shadow:0 0 0 3px rgba(199,170,81,.11)}
 .primary{background:linear-gradient(135deg,#0a155d,#101b70)!important;border:0!important;font-weight:650;letter-spacing:.01em}
 @media(max-width:1050px){.patientExpedienteSide{width:100%}.expedienteSideList{padding:9px;gap:5px}.expedienteSideItem{border:1px solid #f0ece2}.patientTabs{width:100%}}
+
+/* PsicoVida · sistema visual premium global */
+:root{--premium-navy:#0c1554;--premium-gold:#b88b22;--premium-paper:#f8f7f3;--premium-border:#e8e4da;--premium-text:#25293b}
+html{background:var(--premium-paper)}
+body{background:radial-gradient(circle at 80% 0%,#fff 0,#f8f7f3 38%,#f4f3ee 100%);color:var(--premium-text);-webkit-font-smoothing:antialiased}
+aside{background:linear-gradient(180deg,#0b1458 0%,#071044 100%);border-right:1px solid rgba(255,255,255,.07)}
+.brandText strong{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.15px}.brandText small{color:#d8bb61}
+nav button{font-weight:540;letter-spacing:.005em}nav button.active{background:rgba(255,255,255,.085);box-shadow:inset 2px 0 0 #d0ad45}
+.accountBar{background:rgba(255,255,255,.7);border:1px solid var(--premium-border);border-radius:10px;padding:7px 10px;backdrop-filter:blur(8px)}
+header h1,.welcome h1,.loginBrand h1{font-family:Georgia,"Times New Roman",serif;font-weight:600}
+header button,.softAction,.uploadBtn{border-color:#e5e1d7!important;background:#fff!important;box-shadow:none!important}
+header button:hover,.softAction:hover,.uploadBtn:hover{background:#faf8f2!important;border-color:#d8ca9d!important}
+.stats article,.quick button,.doc,.fileCategory,.savedSessions article,.adminGrid article,.featureCard{border-color:var(--premium-border)!important;box-shadow:none!important}
+.stats article:hover,.quick button:hover,.featureCard:hover{border-color:#ddd1ae!important;box-shadow:0 9px 22px rgba(17,25,66,.045)!important}
+.stats strong,.quick b,.doc b,.featureCard h3{color:var(--premium-navy)}
+.title h2,.sectionHead h2,.panel>h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;color:var(--premium-navy)}
+.eyebrow{color:#a07b22;font-weight:750}
+.notice,.dataNotice{border:1px solid #e7e2d4;background:#faf9f4}
+.search{background:#fff;border-color:#e3dfd5}.search:focus-within{border-color:#c9ad5d;box-shadow:0 0 0 3px rgba(190,157,64,.08)}
+.patient{transition:background .15s;padding-left:7px;padding-right:7px;border-radius:9px}.patient:hover{background:#faf9f5}
+.avatar{background:linear-gradient(145deg,#f0ead8,#e8dfc4);color:#16205d}
+.formsection{border-color:#efebe2}.formsection h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;color:#19215b}
+label{font-weight:620;color:#55596a}
+input,textarea,select{border-radius:8px!important}
+.docs{gap:8px}.doc{border-radius:10px;padding:11px}.doc svg{width:17px}
+.appointment{border-color:var(--premium-border);box-shadow:none}.dateBadge{background:#f5f2e8;color:#111b5b}
+.calendarConnect,.agendaCalendar{border-color:var(--premium-border)!important;box-shadow:none!important}
+.calendarToolbar{border-bottom:1px solid #eeeae1;padding-bottom:10px}.calendarToolbar h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;color:var(--premium-navy)}
+.dayCell{background:#fff;border-color:#eeeae2!important}.dayCell:hover{background:#fbfaf6}.dayCell.today{box-shadow:inset 0 0 0 1px #c5a547;background:#fffdf7}
+.calendarEvent{background:#f3efe1!important;border-left:2px solid #b78c25!important;color:#17205a!important}
+.privateNotes textarea{background:#fffdf8}
+.loginShell{background:linear-gradient(135deg,#07104a,#111b61)!important}.loginCard{border:1px solid #e8e2d2!important;box-shadow:0 22px 60px rgba(0,0,0,.12)!important}.loginCard h2{font-family:Georgia,"Times New Roman",serif;color:var(--premium-navy)}
+.authMsg{border-radius:8px}
+.welcome{background:linear-gradient(135deg,#fff,#f7f2e5)!important;border:1px solid #e8e0c9!important;box-shadow:none!important}
+.welcome h1{color:var(--premium-navy)}
+.todayStrip{border:1px solid var(--premium-border)!important;background:#fff!important;box-shadow:none!important}
+.closingBanner{background:linear-gradient(135deg,#0c1554,#151f64)!important;box-shadow:none!important}
+.supportBox{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);border-radius:10px}
+table{border-collapse:separate;border-spacing:0;width:100%}th{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#777b88;background:#f8f7f3}td,th{border-bottom:1px solid #eeeae2;padding:10px}
+button{transition:background .15s,border-color .15s,transform .15s,box-shadow .15s}
+button:active{transform:translateY(1px)}
+::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background:#d9d5cb;border-radius:10px}::-webkit-scrollbar-track{background:transparent}
+@media(max-width:900px){.accountBar{margin-top:2px}.panel{box-shadow:none}.stats article{min-height:auto}.welcome{padding:18px!important}}
