@@ -64,3 +64,9 @@ input,textarea,select{font:inherit;box-sizing:border-box}textarea{resize:vertica
 .calendarEvent{display:block;width:100%;margin-top:5px;padding:6px 7px;border:0;border-radius:7px;background:#eef5f8;color:var(--navy);font-size:11px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
 .dayCell small{display:block;margin-top:5px;color:var(--muted)}
 @media(max-width:700px){.agendaCalendar{overflow-x:auto}.weekHead,.monthGrid{min-width:700px}.calendarActions{width:100%}.calendarActions>*{flex:1}.dayCell{min-height:95px}}
+
+.privateNotes textarea{width:100%;margin:12px 0 14px;min-height:170px}
+.privateNotesList{display:grid;gap:12px}
+.privateNotesList article{padding:16px;border:1px solid #e7ecef;border-radius:14px;background:#fff}
+.privateNotesList article small{color:var(--muted)}
+.privateNotesList article p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.55}
