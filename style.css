@@ -274,3 +274,14 @@ main{background:linear-gradient(135deg,#f8f5ed 0%,#f1ecdf 100%);min-height:100vh
 .welcome:before{background:linear-gradient(#e3c967,#b58a20)!important}
 .todayStrip{border-color:#e1d7c0!important}
 .quick button,.doc,.fileCategory,.savedSessions article{background:#fffdf8!important}
+
+/* Corrección dashboard: legibilidad + sidebar limpio */
+aside{overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none}
+aside::-webkit-scrollbar{display:none;width:0;height:0}
+.welcome{background:linear-gradient(120deg,#0d1759 0%,#172269 62%,#223078 100%)!important;border:1px solid #25327a!important;color:#fff!important}
+.welcome:before{background:linear-gradient(#e1c568,#b8891d)}
+.welcome:after{background:rgba(255,255,255,.055)}
+.welcome .eyebrow,.welcome>span{color:#e3c66b!important}
+.welcome h1,.welcome h2,.welcome h3,.welcome strong{color:#fff!important;text-shadow:none}
+.welcome p,.welcome .muted{color:#e7e9f5!important}
+.welcome img{background:#fff;border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 26px rgba(0,0,0,.2)}
