@@ -11,5 +11,9 @@
     "lucide-react": "latest",
     "@supabase/supabase-js": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  }
 }
