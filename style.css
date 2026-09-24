@@ -289,3 +289,20 @@ aside::-webkit-scrollbar{display:none;width:0;height:0}
 /* Azul translúcido PsicoVida */
 .welcome{background:linear-gradient(115deg,rgba(13,25,103,.94) 0%,rgba(28,39,111,.90) 58%,rgba(47,48,91,.82) 100%)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(194,158,54,.45)!important;box-shadow:0 12px 34px rgba(13,22,76,.10)!important}
 .welcome:after{background:radial-gradient(circle,rgba(211,181,87,.12),rgba(255,255,255,.035) 55%,transparent 72%)}
+
+/* Documentos clínicos editables + salida PDF */
+.clinicalDocHeading{display:flex;justify-content:space-between;align-items:flex-start;padding:4px 0 15px;margin-bottom:12px;border-bottom:1px solid #e8e1cf}.clinicalDocHeading h2{margin:4px 0 3px;font-family:Georgia,"Times New Roman",serif;font-size:20px;color:#0b1557}.clinicalDocHeading p{margin:0;color:#777985;font-size:11px}
+@media print{
+ body{background:#fff!important;color:#171a27!important}
+ aside,.mobileMenu,.overlay,.accountBar,header,.noPrint{display:none!important}
+ .app{display:block!important}.app main,main{max-width:none!important;width:100%!important;padding:0!important;margin:0!important}
+ .clinicalDocument{display:block!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important;background:#fff!important}
+ .clinicalDocHeading{display:flex!important;margin-bottom:18px!important;padding-bottom:12px!important;border-bottom:2px solid #c5a044!important}
+ .clinicalDocHeading h2{font-size:22px!important}
+ .formsection{break-inside:avoid;padding:9px 0 13px!important}
+ .formsection h2{font-size:14px!important;margin:0 0 8px!important}
+ .clinicalDocument label{font-size:10px!important;color:#343746!important;margin:7px 0!important}
+ .clinicalDocument textarea{overflow:visible!important;resize:none!important;border:1px solid #ddd8cc!important;background:#fff!important;box-shadow:none!important;font-size:11px!important;line-height:1.4!important;min-height:44px!important}
+ .updated{font-size:9px!important;margin-top:14px!important}
+ @page{size:A4;margin:14mm}
+}
