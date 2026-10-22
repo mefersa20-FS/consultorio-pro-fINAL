@@ -1,17 +1,20 @@
 {
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "test": "node --test tests/*.test.js",
+    "test:integration": "node --env-file=.env.local --test tests/*.test.js"
   },
   "dependencies": {
+    "@neondatabase/auth": "^0.6.0-beta",
+    "@neondatabase/serverless": "^1.2.0",
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
+    "jose": "^6.2.13",
+    "lucide-react": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "latest",
-    "@supabase/supabase-js": "latest"
+    "vite": "latest"
   },
-  "devDependencies": {},
   "type": "module",
   "engines": {
     "node": "24.x"

@@ -1,29 +1,15 @@
-# Consultorio Pro
-Prototipo funcional de expediente clínico digital.
+# PsicoVida
 
-## Ejecutar
-1. Instalar Node.js 20+
-2. `npm install`
-3. `npm run dev`
+Aplicación React/Vite. Esta rama implementa la migración inicial a Neon y mantiene la versión de producción separada.
 
-## Incluye
-- Dashboard y pacientes
-- Expediente individual
-- Entrevista inicial
-- Historia clínica
-- Objetivos terapéuticos
-- Análisis funcional ABC
-- Plan de tratamiento
-- Seguimiento de sesiones
-- Evaluación inicial de riesgo
-- Plan de seguridad
-- Consentimiento informado
-- Informes, derivación y alta
-- Guardado automático local e impresión
+Consulta `MIGRACION_SIN_SUPABASE.md` para el estado real, recursos creados, limitaciones y pasos de validación pendientes.
 
-## Importante
-El almacenamiento actual usa localStorage únicamente para demostración/prototipado. Antes de utilizar datos clínicos reales debe sustituirse por autenticación, base de datos segura, cifrado, control de acceso, copias de seguridad, auditoría y políticas de privacidad/retención adecuadas a la normativa aplicable.
+## Desarrollo
 
+Node 24. `npm ci`, copiar `.env.example` a `.env.local` y completar las variables de la rama de prueba. No subir secretos. Ejecutar `npm run dev` para frontend; `/api/data` requiere el runtime de funciones Vercel, no el servidor Vite por sí solo.
 
-## Identidad PsicoVida
-Esta versión incorpora los logos institucionales en `public/` y una paleta azul marino, dorado, blanco y marfil.
+- `npm run build`: frontend.
+- `npm test`: pruebas sin credenciales; integración se omite.
+- `npm run test:integration`: pruebas con Neon desde `.env.local`; utiliza datos sintéticos y rollback.
+
+El esquema versionado está en `db/001_neon.sql` y ya está aplicado al destino de migración. No ejecutar contra otra base sin revisar el destino.
