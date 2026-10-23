@@ -320,3 +320,8 @@ aside::-webkit-scrollbar{display:none;width:0;height:0}
 .brand img{width:52px!important;height:52px!important;max-width:52px!important}
 .welcomeLogo,.welcome img{width:78px!important;height:78px!important;max-width:78px!important}
 @media(max-width:640px){.brand img{width:44px!important;height:44px!important}.welcomeLogo,.welcome img{width:62px!important;height:62px!important}}
+
+/* Espacios amplios para notas clínicas de varios párrafos */
+.clinicalDocument textarea.expandingClinicalField{display:block;width:100%;min-height:145px;line-height:1.65;padding:14px 16px;resize:vertical;overflow-y:hidden;white-space:pre-wrap;box-sizing:border-box}
+.clinicalDocument .formsection label{display:block;margin-bottom:20px}
+@media(max-width:640px){.clinicalDocument textarea.expandingClinicalField{min-height:165px}}
