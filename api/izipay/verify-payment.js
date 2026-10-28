@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     // or a button click is not proof of payment.
     const sql = database();
     const rows = await sql.query(
-      "SELECT id FROM billing_subscriptions WHERE lower(payer_email) = $1 AND upper(status) IN ('ACTIVE','APPROVED','PAID','COMPLETED') LIMIT 1",
+      "SELECT id FROM billing_subscriptions WHERE lower(payer_email) = $1 AND upper(status) = 'ACTIVE' AND next_billing_at > now() LIMIT 1",
       [email]
     );
     if (!rows.length) {
