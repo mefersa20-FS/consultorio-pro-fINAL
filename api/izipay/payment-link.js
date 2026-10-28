@@ -1,5 +1,7 @@
 import { fail } from '../../lib/neon-server.js';
 
+const DEFAULT_IZIPAY_LINK = 'https://checkout.izipay.pe/link/2acde8bogywsx1';
+
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -10,15 +12,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Never silently send users to a hard-coded or possibly unrelated payment link.
-    // Configure this with the exact Izipay link for the plan and environment.
-    const raw = process.env.IZIPAY_PAYMENT_LINK;
-    if (!raw) {
-      return res.status(503).json({
-        error: 'El enlace de pago aún no está configurado. Contacta al administrador de PsicoVida.'
-      });
-    }
-
+    // Reuse the Izipay payment link already supplied for PsicoVida.
+    // A Vercel environment variable may override it when the merchant updates the link.
+    const raw = process.env.IZIPAY_PAYMENT_LINK || DEFAULT_IZIPAY_LINK;
     let url;
     try {
       url = new URL(raw);
