@@ -62,6 +62,12 @@ export default async function handler(req, res) {
     }
 
     const sql = database();
+    const transactionRecordId = 'izipay:' + transactionId;
+    const duplicate = await sql.query(
+      'SELECT id FROM billing_transactions WHERE environment = $1 AND id = $2 LIMIT 1',
+      [environment, transactionRecordId]
+    );
+    if (duplicate.length) return res.status(200).json({ received: true, activated: true, duplicate: true });
     const users = await sql.query('SELECT id::text AS id FROM neon_auth."user" WHERE lower(email) = $1 LIMIT 1', [email]);
     const userId = users[0]?.id || null;
     const subscriptionId = 'izipay:' + email;
@@ -73,7 +79,7 @@ export default async function handler(req, res) {
     );
     await sql.query(
       "INSERT INTO billing_transactions (environment,id,subscription_id,status,amount,currency,paid_at,merchant_key) VALUES ($1,$2,$3,'PAID',$4,$5,$6::timestamptz,$7) ON CONFLICT (environment,id) DO NOTHING",
-      [environment, 'izipay:' + transactionId, subscriptionId, amount, currency, paidAt, merchantKey]
+      [environment, transactionRecordId, subscriptionId, amount, currency, paidAt, merchantKey]
     );
     return res.status(200).json({ received: true, activated: true });
   } catch (error) {
