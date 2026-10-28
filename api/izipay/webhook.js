@@ -18,7 +18,8 @@ export default async function handler(req, res) {
     const expectedAmount = process.env.IZIPAY_EXPECTED_AMOUNT;
     const expectedCurrency = (process.env.IZIPAY_CURRENCY || 'PEN').toUpperCase();
     const environment = (process.env.IZIPAY_ENVIRONMENT || '').toLowerCase();
-    if (!hashKey || !expectedMerchant || !expectedAmount || !['live', 'sandbox'].includes(environment)) {
+    const configuredAmount = Number(expectedAmount);
+    if (!hashKey || !expectedMerchant || !expectedAmount || !Number.isFinite(configuredAmount) || configuredAmount <= 0 || !['live', 'sandbox'].includes(environment)) {
       return res.status(503).json({ error: 'La confirmación de pagos Izipay aún no está configurada por completo.' });
     }
 
@@ -57,7 +58,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'La notificación no contiene un correo de pagador válido.' });
     }
     if (merchantCode !== expectedMerchant) return res.status(401).json({ error: 'El comercio de la transacción no coincide.' });
-    if (!Number.isFinite(amount) || Math.abs(amount - Number(expectedAmount)) > 0.001 || currency !== expectedCurrency) {
+    if (!Number.isFinite(amount) || Math.abs(amount - configuredAmount) > 0.001 || currency !== expectedCurrency) {
       return res.status(400).json({ error: 'El importe o la moneda no coincide con el plan configurado.' });
     }
 
