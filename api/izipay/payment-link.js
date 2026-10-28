@@ -1,10 +1,9 @@
-import { requireUser, fail } from '../../lib/neon-server.js';
+import { fail } from '../../lib/neon-server.js';
 
 export default async function handler(req,res){
   res.setHeader('Cache-Control','no-store');
   if(req.method!=='POST') return res.status(405).json({error:'Método no permitido'});
   try{
-    await requireUser(req);
     const raw=process.env.IZIPAY_PAYMENT_LINK || 'https://checkout.izipay.pe/link/2acde8bogywsx1';
     if(!raw) return res.status(503).json({error:'Falta configurar el enlace de pago Izipay.'});
     let url;
