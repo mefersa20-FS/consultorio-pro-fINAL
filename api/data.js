@@ -26,7 +26,7 @@ export function createHandler({authenticate=requireUser, connect=database}={}) {
       rows = await sql.query(`UPDATE clinical_documents SET data = data || $${args.length}::jsonb, updated_at = now() WHERE ${where} RETURNING *`, args);
     } else {
       const id = b.resource === 'profiles' ? user.id : randomUUID();
-      const patientId = ['clinical_records','appointments','therapy_sessions'].includes(b.resource) ? String(b.values.patient_id) : null;
+      const patientId = ['clinical_records','appointments','therapy_sessions','patient_payments'].includes(b.resource) ? String(b.values.patient_id) : null;
       if (patientId) {
         const owned = await sql.query("SELECT id FROM clinical_documents WHERE owner_id = $1 AND resource = 'patients' AND id = $2 LIMIT 1", [user.id, patientId]);
         if (!owned.length) return res.status(400).json({error:'El paciente no existe en tu cuenta'});
