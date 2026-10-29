@@ -7,7 +7,8 @@ export default async function handler(req,res){
   const sql=database();
   const owner=await sql.query('SELECT email FROM neon_auth."user" WHERE id::text=$1 LIMIT 1',[user.id]);
   const email=owner[0]?.email?.toLowerCase();
-  if(!email || !process.env.ADMIN_EMAIL || email!==process.env.ADMIN_EMAIL.trim().toLowerCase())return res.status(403).json({error:'Acceso exclusivo de administración'});
+  const adminEmail=(process.env.ADMIN_EMAIL || 'mefersa20@gmail.com').trim().toLowerCase();
+  if(!email || email!==adminEmail)return res.status(403).json({error:'Acceso exclusivo de administración'});
   const [professionals,subscriptions,transactions]=await Promise.all([
    sql.query('SELECT id::text AS id,name,email,"createdAt" AS created_at FROM neon_auth."user" ORDER BY "createdAt" DESC LIMIT 100'),
    sql.query('SELECT id,user_id,payer_email,status,amount,currency,started_at,next_billing_at,last_payment_at,environment FROM billing_subscriptions ORDER BY started_at DESC NULLS LAST LIMIT 100'),
